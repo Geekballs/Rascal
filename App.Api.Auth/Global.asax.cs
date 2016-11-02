@@ -1,5 +1,4 @@
-﻿using System.Net.Http.Formatting;
-using System.Web;
+﻿using System.Web;
 using System.Web.Http;
 using App.Api.Auth.Lib.Initialize;
 
