@@ -22,9 +22,9 @@ namespace App.Api.Auth
         {
             var oAuthServerOptions = new OAuthAuthorizationServerOptions()
             {
-                AllowInsecureHttp = true,
-                TokenEndpointPath = new PathString("/token"),
-                AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
+                AllowInsecureHttp = AppConfig.AllowInsecureHttp,
+                TokenEndpointPath = new PathString(AppConfig.TokenEndpointPath),
+                AccessTokenExpireTimeSpan = TimeSpan.FromMinutes(AppConfig.AccessTokenExpireTimeSpan),
                 Provider = new AdAuthProvider()
             };
             app.UseOAuthAuthorizationServer(oAuthServerOptions);
