@@ -10,8 +10,6 @@ namespace App.Api.Auth
         protected void Application_Start()
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            GlobalConfiguration.Configuration.Formatters.Clear();
-            GlobalConfiguration.Configuration.Formatters.Add(new JsonMediaTypeFormatter());
         }
     }
 }
